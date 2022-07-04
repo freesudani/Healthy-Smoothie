@@ -27,6 +27,10 @@ module.exports = {
         primary: { 200: "#0b752c", 100: "#549e6b" },
         secondary: { 200: "#fa8348", 100: "#faae48" },
       },
+      backgroundImage: {
+        "hero-bg": "url('./images/blob-scene-haikei.svg')",
+        "alcohol-bg": "url('./images/alcohol-1297932_1280.png')",
+      },
     },
   },
   plugins: [],
