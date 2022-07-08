@@ -6,7 +6,7 @@ import CoffeeImage from "../images/cappuccino-756490_prev_ui.png";
 const Products: FC = () => {
   return (
     <div className="w-screen h-screen pb-20 pt-10 pl-52 bg-products-bg bg-no-repeat bg-center bg-cover grid grid-cols-4 grid-rows-3 items-center justify-center">
-      <div className=" w-[45rem] bg-primary-200   col-start-3 row-start-1 col-end-4 row-end-1 grid grid-cols-2 relative">
+      <div className=" w-[45rem] bg-primary-200   col-start-3 row-start-1 col-end-4 row-end-1 grid grid-cols-2 relative shadow-lg shadow-neutral-900">
         <div className="grid grid-rows-3">
           <div>
             <h2 className="text-white text-3xl text-center m-5">
@@ -43,9 +43,9 @@ const Products: FC = () => {
           <img src={SmoothieImage} alt="smoothie" className="w-[100rem]" />
         </div>
       </div>
-      <div className=" w-[45rem] bg-primary-200 col-start-1 col-end-2 row-start-2 row-end-2 relative grid grid-cols-2">
+      <div className=" w-[45rem] bg-primary-200 col-start-1 col-end-2 row-start-2 row-end-2 relative grid grid-cols-2 shadow-lg shadow-neutral-900">
         <div className="row-span-3 absolute -top-36 -right-60">
-          <img src={TomatoImage} alt="Juice" className="w-[50rem]" />
+          <img src={TomatoImage} alt="Juice" className="w-[50rem] " />
         </div>
         <div className="grid grid-rows-3">
           <div>
@@ -80,7 +80,7 @@ const Products: FC = () => {
           </div>
         </div>
       </div>
-      <div className=" w-[45rem] bg-primary-200   col-start-3 row-start-3 col-end-4 row-end-3 grid grid-cols-2 relative mb-8">
+      <div className=" w-[45rem] bg-primary-200   col-start-3 row-start-3 col-end-4 row-end-3 grid grid-cols-2 relative mb-8 shadow-lg shadow-neutral-900">
         <div className="grid grid-rows-3">
           <div>
             <h2 className="text-white text-3xl text-center m-5">

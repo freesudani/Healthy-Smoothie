@@ -31,6 +31,7 @@ module.exports = {
         "hero-bg": "url('./images/blob-scene-haikei.svg')",
         "alcohol-bg": "url('./images/alcohol-1297932_1280.png')",
         "products-bg": "url('./images/wave-haikei-2.svg')",
+        "location-bg": "url('./images/cafe-1869656_1920.jpg')",
       },
     },
   },
