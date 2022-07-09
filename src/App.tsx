@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import StoreApp from "./components/StoreApp";
 import Products from "./components/Products";
 import Location from "./components/Location";
+import Footer from "./components/Footer";
 
 const App: FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: FC = () => {
       <StoreApp />
       <Products />
       <Location />
+      <Footer />
     </div>
   );
 };
