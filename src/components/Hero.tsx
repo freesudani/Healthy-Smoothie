@@ -15,22 +15,22 @@ const Hero: FC = () => {
   return (
     <div className="w-screen h-[51rem] relative bg-hero-bg bg-no-repeat bg-center bg-cover flex justify-center items-center">
       {!showSlide && (
-        <div className="w-3/6 h-7/12 py-5 z-10 shadow-lg shadow-neutral-900 grid grid-cols-2 grid-rows-2 bg-black bg-opacity-20">
+        <div className="w-3/6 sm:w-4/6 mb:w-5/6 h-7/12 py-5 z-10 shadow-lg shadow-neutral-900 grid grid-cols-2 grid-rows-2 bg-black bg-opacity-20">
           <div className="flex justify-center items-center">
-            <h1 className="text-6xl uppercase text-white text-center font-bold">
+            <h1 className="text-6xl md:text-5xl mb:text-4xl uppercase text-white text-center font-bold">
               Drink Smart <br /> live well
             </h1>
           </div>
           <div className="row-span-2 flex justify-center items-center relative">
             <img src={LemonandeImage} alt="lemonade" className="w-10/12" />
-            <h6 className="text-2xl -rotate-90 absolute -right-16 text-white font-bold -z-10">
+            <h6 className="text-2xl -rotate-90 absolute -right-16 lg:-right-32 mb:-right-24 md:text-xl mb:text-lg text-white font-bold -z-10">
               Don’t settle for something ordinary <br />
               Taste the best Lemonade
             </h6>
           </div>
           <div className="flex justify-between items-center flex-col">
             <img src={DrinksImages} alt="drinks" className="w-7/12 mb-5" />
-            <h6 className=" text-secondary-200 text-2xl uppercase">
+            <h6 className=" text-secondary-200 text-2xl uppercase md:text-xl md:w-full md:text-center">
               try our freshly squeezed juices
             </h6>
           </div>

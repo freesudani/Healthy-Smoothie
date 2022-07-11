@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 const App: FC = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-center">
       <Navbar />
       <Hero />
       <StoreApp />

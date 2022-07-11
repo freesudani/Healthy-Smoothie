@@ -9,13 +9,13 @@ import IconImage from "../images/e153069c5bc343f08a9b8398de94b63c.png";
 
 const Footer: FC = () => {
   return (
-    <div className="w-screen h-[25rem] bg-primary-200 p-10 grid grid-cols-2 text-white relative">
-      <div className="flex flex-col justify-around">
+    <div className="w-screen h-[25rem] bg-primary-200 p-10 sm:p-8 grid grid-cols-2 text-white relative">
+      <div className="flex flex-col justify-around md:w-3/4 sm:w-11/12">
         <div className="flex justify-start items-center">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-12"
+              className="h-12 w-12 mb:h-10 mb:w-10"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -34,7 +34,7 @@ const Footer: FC = () => {
             </svg>
           </div>
           <div>
-            <h2 className="text-2xl ml-3">
+            <h2 className="text-2xl ml-3 mb:ml-1 mb:text-xl">
               The Baby Soi 7 556 South 9700 East American Fork, AT/MT 84521
             </h2>
           </div>
@@ -43,7 +43,7 @@ const Footer: FC = () => {
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-12"
+              className="h-12 w-12 mb:h-10 mb:w-10"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -57,14 +57,14 @@ const Footer: FC = () => {
             </svg>
           </div>
           <div>
-            <h2 className="text-2xl ml-3">(652) 780-0584</h2>
+            <h2 className="text-2xl ml-3 mb:ml-1 mb:text-xl">(652) 780-0584</h2>
           </div>
         </div>
         <div className="flex justify-start items-center">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-12"
+              className="h-12 w-12 mb:h-10 mb:w-10"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -78,13 +78,13 @@ const Footer: FC = () => {
             </svg>
           </div>
           <div>
-            <h2 className="text-2xl ml-3">
+            <h2 className="text-2xl ml-3 mb:ml-1 mb:text-xl">
               customer-service@healthy-smoothie.com
             </h2>
           </div>
         </div>
       </div>
-      <div className="w-2/4 flex flex-col justify-around">
+      <div className="w-2/4 md:w-4/6 flex flex-col justify-around sm:w-11/12">
         <div>
           <h1 className="text-2xl font-bold">About The Company</h1>
         </div>
@@ -96,7 +96,7 @@ const Footer: FC = () => {
             exercitationem ipsam perferendis.
           </body>
         </div>
-        <div className="flex justify-between items-center w-2/4">
+        <div className="flex justify-between items-center w-2/4 md:w-3/4 mb:w-full">
           <div>
             <FaFacebookSquare className="text-5xl hover:text-[#3b5998] hover:duration-300 hover:ease-in" />
           </div>
@@ -111,11 +111,11 @@ const Footer: FC = () => {
           </div>
         </div>
       </div>
-      <div className="absolute right-20 top-24">
+      <div className="absolute right-20 top-24 md:right-5 sm:hidden">
         <img
           src={IconImage}
           alt="Logo"
-          className="h-auto w-52 rounded-full hover:-rotate-12 hover:w-60 hover:ease-in hover:duration-300"
+          className="h-auto w-52 md:w-44 rounded-full hover:-rotate-12 hover:w-60 hover:ease-in hover:duration-300"
         />
       </div>
     </div>

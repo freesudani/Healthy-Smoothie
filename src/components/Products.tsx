@@ -5,8 +5,8 @@ import CoffeeImage from "../images/cappuccino-756490_prev_ui.png";
 
 const Products: FC = () => {
   return (
-    <div className="w-screen h-screen pb-20 pt-10 pl-52 bg-products-bg bg-no-repeat bg-center bg-cover grid grid-cols-4 grid-rows-3 items-center justify-center">
-      <div className=" w-[45rem] bg-primary-200   col-start-3 row-start-1 col-end-4 row-end-1 grid grid-cols-2 relative shadow-lg shadow-neutral-900">
+    <div className="w-screen mb:overflow-hidden  h-screen pb-20 pt-10 pl-52 lg:pl-5 mb:pl-0 bg-products-bg bg-no-repeat bg-center bg-cover grid grid-cols-4 grid-rows-3 md:flex md:flex-col md:justify-between items-center justify-center">
+      <div className=" w-[45rem] mb:w-screen bg-primary-200   col-start-3 row-start-1 col-end-4 row-end-1 grid grid-cols-2 relative shadow-lg shadow-neutral-900">
         <div className="grid grid-rows-3">
           <div>
             <h2 className="text-white text-3xl text-center m-5">
@@ -39,15 +39,23 @@ const Products: FC = () => {
             </button>
           </div>
         </div>
-        <div className="row-span-3 absolute -top-36 -right-28">
-          <img src={SmoothieImage} alt="smoothie" className="w-[100rem]" />
+        <div className="row-span-3 absolute -top-36 mb:-top-32 -right-28 mb:-right-24">
+          <img
+            src={SmoothieImage}
+            alt="smoothie"
+            className="w-[100rem] mb:w-[80rem]"
+          />
         </div>
       </div>
-      <div className=" w-[45rem] bg-primary-200 col-start-1 col-end-2 row-start-2 row-end-2 relative grid grid-cols-2 shadow-lg shadow-neutral-900">
-        <div className="row-span-3 absolute -top-36 -right-60">
-          <img src={TomatoImage} alt="Juice" className="w-[50rem] " />
+      <div className=" w-[45rem] mb:w-screen bg-primary-200 col-start-1 col-end-2 row-start-2 row-end-2 relative grid grid-cols-2 shadow-lg shadow-neutral-900">
+        <div className="row-span-3 absolute -top-36 mb:-top-28 -right-60 mb:-right-40">
+          <img
+            src={TomatoImage}
+            alt="Juice"
+            className="w-[50rem] mb:w-[40rem]"
+          />
         </div>
-        <div className="grid grid-rows-3">
+        <div className="grid grid-rows-3 ">
           <div>
             <h2 className="text-white text-3xl text-center m-5">
               Healthy Smoothies
@@ -80,8 +88,8 @@ const Products: FC = () => {
           </div>
         </div>
       </div>
-      <div className=" w-[45rem] bg-primary-200   col-start-3 row-start-3 col-end-4 row-end-3 grid grid-cols-2 relative mb-8 shadow-lg shadow-neutral-900">
-        <div className="grid grid-rows-3">
+      <div className=" w-[45rem] mb:w-screen bg-primary-200   col-start-3 row-start-3 col-end-4 row-end-3 grid grid-cols-2 relative mb-8 shadow-lg shadow-neutral-900">
+        <div className="grid grid-rows-3 ">
           <div>
             <h2 className="text-white text-3xl text-center m-5">
               Hot Beverage
@@ -113,8 +121,12 @@ const Products: FC = () => {
             </button>
           </div>
         </div>
-        <div className="row-span-3 absolute -top-13 -right-28">
-          <img src={CoffeeImage} alt="coffee" className="w-[30rem]" />
+        <div className="row-span-3 absolute -top-13 -right-28 mb:-right-10">
+          <img
+            src={CoffeeImage}
+            alt="coffee"
+            className="w-[30rem] mb:w-[25rem]"
+          />
         </div>
       </div>
     </div>
