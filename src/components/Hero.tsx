@@ -1,52 +1,103 @@
 import React, { FC, useState } from "react";
 import DrinksImages from "../images/drinks-1430739.png";
 import LemonandeImage from "../images/juice-35236_1280.png";
+import { motion, AnimatePresence } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    x: "100vw",
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      mass: 0.4,
+      damping: 8,
+      staggerChildren: 0.4,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const childVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
 
 const Hero: FC = () => {
   const [showSlide, setShowSlide] = useState(false);
 
   const showSlideone = () => {
-    setShowSlide(false);
+    setTimeout(() => {
+      setShowSlide(false);
+    }, 500);
   };
 
   const showSlidetwo = () => {
-    setShowSlide(true);
+    setTimeout(() => {
+      setShowSlide(true);
+    }, 500);
   };
+
   return (
-    <div className="w-screen h-[51rem] relative bg-hero-bg bg-no-repeat bg-center bg-cover flex justify-center items-center">
-      {!showSlide && (
-        <div className="w-3/6 sm:w-4/6 mb:w-5/6 h-7/12 py-5 z-10 shadow-lg shadow-neutral-900 grid grid-cols-2 grid-rows-2 bg-black bg-opacity-20">
-          <div className="flex justify-center items-center">
-            <h1 className="text-6xl md:text-5xl mb:text-4xl uppercase text-white text-center font-bold">
-              Drink Smart <br /> live well
-            </h1>
-          </div>
-          <div className="row-span-2 flex justify-center items-center relative">
-            <img src={LemonandeImage} alt="lemonade" className="w-10/12" />
-            <h6 className="text-2xl -rotate-90 absolute -right-16 lg:-right-32 mb:-right-24 md:text-xl mb:text-lg text-white font-bold -z-10">
-              Don’t settle for something ordinary <br />
-              Taste the best Lemonade
-            </h6>
-          </div>
-          <div className="flex justify-between items-center flex-col">
-            <img src={DrinksImages} alt="drinks" className="w-7/12 mb-5" />
-            <h6 className=" text-secondary-200 text-2xl uppercase md:text-xl md:w-full md:text-center">
-              try our freshly squeezed juices
-            </h6>
-          </div>
-        </div>
-      )}
-      {showSlide && (
-        <div className="w-3/6 h-7/12 py-5 z-10 shadow-lg shadow-neutral-900  bg-alcohol-bg   bg-no-repeat bg-center bg-cover ">
-          <div className="flex justify-center items-center m-12  bg-black/80">
-            <h1 className="text-white text-6xl text-center uppercase">
-              we invite our customers to try our beverages, while also offering
-              our seasoned coffee drinkers & smoothie lovers a way to experience
-              our beverages in a new way
-            </h1>
-          </div>
-        </div>
-      )}
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="w-screen h-[51rem] relative bg-hero-bg bg-no-repeat bg-center bg-cover flex justify-center items-center"
+    >
+      <AnimatePresence exitBeforeEnter>
+        {!showSlide && (
+          <motion.div
+            variants={childVariants}
+            className="w-3/6 sm:w-4/6 mb:w-5/6 h-7/12 py-5 z-10 shadow-lg shadow-neutral-900 grid grid-cols-2 grid-rows-2 bg-black bg-opacity-20"
+          >
+            <div className="flex justify-center items-center">
+              <h1 className="text-6xl md:text-5xl mb:text-4xl uppercase text-white text-center font-bold">
+                Drink Smart <br /> live well
+              </h1>
+            </div>
+            <div className="row-span-2 flex justify-center items-center relative">
+              <img src={LemonandeImage} alt="lemonade" className="w-10/12" />
+              <h6 className="text-2xl -rotate-90 absolute -right-16 lg:-right-32 mb:-right-24 md:text-xl mb:text-lg text-white font-bold -z-10">
+                Don’t settle for something ordinary <br />
+                Taste the best Lemonade
+              </h6>
+            </div>
+            <div className="flex justify-between items-center flex-col">
+              <img src={DrinksImages} alt="drinks" className="w-7/12 mb-5" />
+              <h6 className=" text-secondary-200 text-2xl uppercase md:text-xl md:w-full md:text-center">
+                try our freshly squeezed juices
+              </h6>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
+        {showSlide && (
+          <motion.div
+            variants={childVariants}
+            className="w-3/6 h-7/12 py-5 z-10 shadow-lg shadow-neutral-900  bg-alcohol-bg   bg-no-repeat bg-center bg-cover "
+          >
+            <div className="flex justify-center items-center m-12  bg-black/80">
+              <h1 className="text-white text-6xl text-center uppercase">
+                we invite our customers to try our beverages, while also
+                offering our seasoned coffee drinkers & smoothie lovers a way to
+                experience our beverages in a new way
+              </h1>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="flex absolute left-20 bottom-5">
         <div className="flex items-center mr-4">
           <input
@@ -69,7 +120,7 @@ const Hero: FC = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

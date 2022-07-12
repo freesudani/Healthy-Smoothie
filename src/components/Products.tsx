@@ -20,7 +20,7 @@ const Products: FC = () => {
             </body>
           </div>
           <div className="flex justify-center items-center">
-            <button className="smbt secondarybt flex items-center justify-center">
+            <button className="smbt secondarybt flex items-center justify-center animate-bounce">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 inline mr-3"
@@ -68,7 +68,7 @@ const Products: FC = () => {
             </body>
           </div>
           <div className="flex justify-center items-center">
-            <button className="smbt secondarybt flex items-center justify-center">
+            <button className="smbt secondarybt flex items-center justify-center animate-bounce">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 inline mr-3"
@@ -102,7 +102,7 @@ const Products: FC = () => {
             </body>
           </div>
           <div className="flex justify-center items-center">
-            <button className="smbt secondarybt flex items-center justify-center">
+            <button className="smbt secondarybt flex items-center justify-center animate-bounce">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 inline mr-3"

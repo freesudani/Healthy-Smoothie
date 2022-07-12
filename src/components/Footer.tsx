@@ -115,7 +115,7 @@ const Footer: FC = () => {
         <img
           src={IconImage}
           alt="Logo"
-          className="h-auto w-52 md:w-44 rounded-full hover:-rotate-12 hover:w-60 hover:ease-in hover:duration-300"
+          className="h-auto w-52 md:w-44 rounded-full   hover:animate-spin"
         />
       </div>
     </div>

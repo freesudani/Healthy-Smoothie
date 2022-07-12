@@ -2,13 +2,24 @@ import React, { FC } from "react";
 import ThirstyImage from "../images/sad-3672388_1920.png";
 import GooglePlay from "../images/256x256.png";
 import AppStore from "../images/256x256A.png";
+import { motion } from "framer-motion";
+
+const buttonVariants = {
+  hover: {
+    scale: 1.05,
+    transition: {
+      duration: 0.3,
+      yoyo: Infinity,
+    },
+  },
+};
 
 const StoreApp: FC = () => {
   return (
     <div className="w-screen h-[51rem]  bg-white flex justify-center items-center ">
       <div className="w-10/12 mb:w-11/12 h-7/12   bg-primary-100 flex justify-center items-center flex-col shadow-lg shadow-neutral-900 relative">
         <div className="absolute left-0">
-          <img src={ThirstyImage} alt="Image" className="h-auto w-96" />
+          <img src={ThirstyImage} alt="ThirstyImage" className="h-auto w-96" />
         </div>
         <div className="my-5">
           <h5 className="text-white text-4xl font-bold">Drink App</h5>
@@ -24,12 +35,20 @@ const StoreApp: FC = () => {
           </h3>
         </div>
         <div className="flex items-center justify-between mb-5 sm:mb-1">
-          <div className="mx-5 cursor-pointer">
+          <motion.div
+            variants={buttonVariants}
+            whileHover="hover"
+            className="mx-5 cursor-pointer"
+          >
             <img src={GooglePlay} alt="googlePlay" className="w-64 mb:w-60" />
-          </div>
-          <div className="mx-5 cursor-pointer">
+          </motion.div>
+          <motion.div
+            variants={buttonVariants}
+            whileHover="hover"
+            className="mx-5 cursor-pointer"
+          >
             <img src={AppStore} alt="AppStore" className="w-64 mb:w-60" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

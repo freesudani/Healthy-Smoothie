@@ -7,6 +7,7 @@ const Navbar: FC = () => {
       <div>
         <img src={IconImage} alt="Logo" className="h-auto w-44" />
       </div>
+
       <div>
         <button className="lgbt primarybt uppercase mb:smbt">Contact Us</button>
       </div>
