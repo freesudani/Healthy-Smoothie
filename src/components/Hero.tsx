@@ -2,48 +2,7 @@ import React, { FC, useState } from "react";
 import DrinksImages from "../images/drinks-1430739.png";
 import LemonandeImage from "../images/juice-35236_1280.png";
 import { motion, AnimatePresence } from "framer-motion";
-
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-    x: "100vw",
-    transition: {
-      staggerChildren: 0.5,
-    },
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      mass: 0.4,
-      damping: 8,
-      staggerChildren: 0.4,
-      when: "beforeChildren",
-    },
-  },
-};
-
-const childVariants = {
-  hidden: {
-    opacity: 0,
-    x: "100vw",
-    transition: {
-      staggerChildren: 0.5,
-    },
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      mass: 0.4,
-      damping: 8,
-      staggerChildren: 0.4,
-      when: "beforeChildren",
-    },
-  },
-};
+import { heroVariants, childVariants } from "../animations/HeroAnimation";
 
 const Hero: FC = () => {
   const [showSlide, setShowSlide] = useState(false);
@@ -62,7 +21,7 @@ const Hero: FC = () => {
 
   return (
     <motion.div
-      variants={containerVariants}
+      variants={heroVariants}
       initial="hidden"
       animate="visible"
       className="w-screen h-[51rem] relative bg-hero-bg bg-no-repeat bg-center bg-cover flex justify-center items-center"
