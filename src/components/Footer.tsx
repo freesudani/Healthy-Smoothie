@@ -34,7 +34,7 @@ const Footer: FC = () => {
             </svg>
           </div>
           <div>
-            <h2 className="text-2xl ml-3 mb:ml-1 mb:text-xl">
+            <h2 className="text-2xl ml-3 mb:ml-1 ph:text-xl">
               The Baby Soi 7 556 South 9700 East American Fork, AT/MT 84521
             </h2>
           </div>
@@ -57,7 +57,7 @@ const Footer: FC = () => {
             </svg>
           </div>
           <div>
-            <h2 className="text-2xl ml-3 mb:ml-1 mb:text-xl">(652) 780-0584</h2>
+            <h2 className="text-2xl ml-3 mb:ml-1 ph:text-xl">(652) 780-0584</h2>
           </div>
         </div>
         <div className="flex justify-start items-center">
@@ -78,7 +78,7 @@ const Footer: FC = () => {
             </svg>
           </div>
           <div>
-            <h2 className="text-2xl ml-3 mb:ml-1 mb:text-xl">
+            <h2 className="text-2xl ml-3 mb:ml-1 ph:text-xl">
               customer-service@healthy-smoothie.com
             </h2>
           </div>
@@ -96,7 +96,7 @@ const Footer: FC = () => {
             exercitationem ipsam perferendis.
           </body>
         </div>
-        <div className="flex justify-between items-center w-2/4 md:w-3/4 mb:w-full">
+        <div className="flex justify-between items-center w-2/4 md:w-3/4 ph:w-full">
           <div>
             <FaFacebookSquare className="text-5xl hover:text-[#3b5998] hover:duration-300 hover:ease-in" />
           </div>

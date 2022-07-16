@@ -5,7 +5,7 @@ import CoffeeImage from "../images/cappuccino-756490_prev_ui.png";
 
 const Products: FC = () => {
   return (
-    <div className="w-screen mb:overflow-hidden  h-screen pb-20 pt-10 pl-52 lg:pl-5 mb:pl-0 bg-products-bg bg-no-repeat bg-center bg-cover grid grid-cols-4 grid-rows-3 md:flex md:flex-col md:justify-between items-center justify-center">
+    <div className="w-screen ph:overflow-hidden  h-screen ph:h-[70rem] pb-20 pt-10 pl-52 lg:pl-5 mb:pl-0 bg-products-bg bg-no-repeat bg-center bg-cover grid grid-cols-4 grid-rows-3 md:flex md:flex-col md:justify-between items-center justify-center">
       <div className=" w-[45rem] mb:w-screen bg-primary-200   col-start-3 row-start-1 col-end-4 row-end-1 grid grid-cols-2 relative shadow-lg shadow-neutral-900">
         <div className="grid grid-rows-3">
           <div>

@@ -20,6 +20,8 @@ module.exports = {
     },
     extend: {
       screens: {
+        ph: { max: "500px" },
+        // => @media (max-width: 500px)  { ... }
         mb: { max: "400px" },
         // => @media (max-width: 400px)  { ... }
       },

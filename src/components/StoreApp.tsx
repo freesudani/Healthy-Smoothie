@@ -16,7 +16,7 @@ const buttonVariants = {
 
 const StoreApp: FC = () => {
   return (
-    <div className="w-screen h-[51rem]  bg-white flex justify-center items-center ">
+    <div className="w-screen h-[51rem] ph:my-10 bg-white flex justify-center items-center ">
       <div className="w-10/12 mb:w-11/12 h-7/12   bg-primary-100 flex justify-center items-center flex-col shadow-lg shadow-neutral-900 relative">
         <div className="absolute left-0">
           <img src={ThirstyImage} alt="ThirstyImage" className="h-auto w-96" />
