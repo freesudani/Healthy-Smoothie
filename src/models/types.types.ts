@@ -4,6 +4,12 @@ export interface NavbarProps {
   path: string;
 }
 
+export interface FranchiseProps {
+  id: number;
+  title: string;
+  price: number;
+}
+
 export interface SidebarProps {
   onHide: () => void;
 }
