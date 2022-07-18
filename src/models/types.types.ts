@@ -10,6 +10,12 @@ export interface FranchiseProps {
   price: number;
 }
 
+export interface StepsProps {
+  id: number;
+  image: string;
+  description: string;
+}
+
 export interface SidebarProps {
   onHide: () => void;
 }
