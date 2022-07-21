@@ -16,6 +16,12 @@ export interface StepsProps {
   description: string;
 }
 
+export interface TrainingProps {
+  id: number;
+  title: string;
+  details: string;
+}
+
 export interface SidebarProps {
   onHide: () => void;
 }
