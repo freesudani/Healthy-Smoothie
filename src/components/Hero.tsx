@@ -30,6 +30,9 @@ const Hero: FC = () => {
         {!showSlide && (
           <motion.div
             variants={childVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
             className="w-3/6 sm:w-4/6 mb:w-5/6 h-7/12 py-5 z-10 shadow-lg shadow-neutral-900 grid grid-cols-2 grid-rows-2 bg-black bg-opacity-20"
           >
             <div className="flex justify-center items-center">
@@ -57,6 +60,9 @@ const Hero: FC = () => {
         {showSlide && (
           <motion.div
             variants={childVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
             className="w-3/6 h-7/12 py-5 z-10 shadow-lg shadow-neutral-900  bg-alcohol-bg   bg-no-repeat bg-center bg-cover "
           >
             <div className="flex justify-center items-center m-12  bg-black/80">

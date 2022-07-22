@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Franchising from "./pages/Franchising";
+import Menu from "./pages/Menu";
 
 const App: FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: FC = () => {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/franchising" element={<Franchising />} />
+        <Route path="/menu" element={<Menu />} />
       </Routes>
       <Footer />
     </div>
