@@ -1,12 +1,14 @@
 import React, { FC } from "react";
+import DrinksandFood from "../components/DrinksandFood";
 import OrderOnline from "../components/OrderOnline";
 
-const Menu: FC = () => {
+const MenuBook: FC = () => {
   return (
     <div>
       <OrderOnline />
+      <DrinksandFood />
     </div>
   );
 };
 
-export default Menu;
+export default MenuBook;
