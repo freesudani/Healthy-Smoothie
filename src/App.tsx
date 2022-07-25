@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Franchising from "./pages/Franchising";
 import Menu from "./pages/Menu";
+import Careers from "./pages/Careers";
 
 const App: FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: FC = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/franchising" element={<Franchising />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/careers" element={<Careers />} />
       </Routes>
       <Footer />
     </div>

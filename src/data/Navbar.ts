@@ -11,8 +11,8 @@ export const data = [
   },
   {
     id: 3,
-    title: "jobs",
-    path: "/jobs",
+    title: "careers",
+    path: "/careers",
   },
   {
     id: 4,

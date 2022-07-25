@@ -1,4 +1,3 @@
-import { AnimatePresence } from "framer-motion";
 import React, { FC, useState } from "react";
 import { data } from "../data/MenuList";
 import { MenuProps } from "../models/types.types";
@@ -31,7 +30,7 @@ const DrinksandFood: FC = () => {
         </div>
 
         <div>{!itemId && <div>X</div>}</div>
-        <div className="overflow-y-scroll scrollbar scrollbar-thumb-primary-200 scrollbar-track-gray-100 scrollbar-thumb-rounded">
+        <div className="overflow-y-scroll overflow-x-hidden scrollbar scrollbar-thumb-primary-200 scrollbar-track-gray-100 scrollbar-thumb-rounded">
           {itemId && <DrinkandFooditems itemId={itemId} />}
         </div>
       </div>
