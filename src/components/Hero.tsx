@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import DrinksImages from "../images/drinks-1430739.png";
 import LemonandeImage from "../images/juice-35236_1280.png";
 import { motion, AnimatePresence } from "framer-motion";
-import { heroVariants, childVariants } from "../animations/HeroAnimation";
+import { childVariants } from "../animations/HeroAnimation";
 
 const Hero: FC = () => {
   const [showSlide, setShowSlide] = useState(false);
@@ -20,12 +20,7 @@ const Hero: FC = () => {
   };
 
   return (
-    <motion.div
-      variants={heroVariants}
-      initial="hidden"
-      animate="visible"
-      className="w-screen h-[51rem] relative bg-hero-bg bg-no-repeat bg-center bg-cover flex justify-center items-center"
-    >
+    <div className="w-screen h-[51rem] relative bg-hero-bg bg-no-repeat bg-center bg-cover flex justify-center items-center">
       <AnimatePresence exitBeforeEnter>
         {!showSlide && (
           <motion.div
@@ -97,7 +92,7 @@ const Hero: FC = () => {
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
