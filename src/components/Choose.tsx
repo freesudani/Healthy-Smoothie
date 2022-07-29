@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 const Choose: FC = () => {
   return (
-    <div className="w-screen h-[51rem] bg-white relative px-44 lg:px-20">
+    <div className="w-screen h-[45rem] bg-white relative px-44 lg:px-20">
       <div className="flex justify-center items-start sm:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
