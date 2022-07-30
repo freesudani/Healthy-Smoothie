@@ -38,6 +38,7 @@ module.exports = {
         "fruit1-bg": "url('./images/drawing-1442406_640.png')",
         "fruit2-bg": "url('./images/fruit-1876159_640.png')",
         "fruit3-bg": "url('./images/pear-1876160_640.png')",
+        "staff-bg": "url('./images/asael-pena-n-HtQS7IgU4-unsplash.jpg')",
       },
     },
   },

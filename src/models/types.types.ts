@@ -34,6 +34,12 @@ export interface SubMenuProps {
   ingredients: string[];
 }
 
+export interface BenefitsProps {
+  id: number;
+  title: string;
+  description: string;
+}
+
 export interface itemProps {
   itemId: number;
 }
