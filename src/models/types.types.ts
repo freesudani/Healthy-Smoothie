@@ -40,10 +40,26 @@ export interface BenefitsProps {
   description: string;
 }
 
+export interface JobsProps {
+  id: number;
+  title: string;
+  location: string;
+  fullTime: boolean;
+  deadline: Date;
+}
+
 export interface itemProps {
   itemId: number;
 }
 
 export interface SidebarProps {
   onHide: () => void;
+}
+
+export interface OnJobProps {
+  OnJobs: React.Dispatch<React.SetStateAction<JobsProps[]>>;
+}
+
+export interface JobVacancyProps {
+  jobs: JobsProps[];
 }
