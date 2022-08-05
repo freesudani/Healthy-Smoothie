@@ -17,7 +17,7 @@ const FranchiseHeading: FC = () => {
         className="w-3/6 sm:w-4/6 mb:w-5/6 h-7/12 p-5 z-10 shadow-lg shadow-neutral-900 flex flex-col bg-black bg-opacity-20"
       >
         <div>
-          <h1 className="text-6xl  md:text-5xl mb:text-4xl uppercase text-white text-center font-bold">
+          <h1 className="text-6xl  md:text-5xl mb:text-4xl uppercase text-secondary-200 text-center font-bold">
             INVESTING IN OUR FRANCHISE
           </h1>
         </div>

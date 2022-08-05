@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import Hero from "../components/Hero";
 import StoreApp from "../components/StoreApp";
 import Products from "../components/Products";
-import Location from "../components/Location";
+import Reviews from "../components/Reviews";
 
 const Home: FC = () => {
   return (
@@ -10,7 +10,7 @@ const Home: FC = () => {
       <Hero />
       <StoreApp />
       <Products />
-      <Location />
+      <Reviews />
     </div>
   );
 };

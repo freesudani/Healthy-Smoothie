@@ -1,11 +1,12 @@
 import React, { FC } from "react";
 
-const Location: FC = () => {
+const HeadQr: FC = () => {
   return (
     <div className="w-screen h-[51rem]  bg-white flex justify-center items-center ">
       <div className="w-[80rem] h-[40rem]  bg-location-bg bg-no-repeat bg-cover bg-center flex justify-center items-center flex-col shadow-lg shadow-neutral-900 ">
         <div className="from-transparent  via-primary-100 to-primary-200 w-full h-full bg-gradient-to-r flex justify-center items-end flex-col">
           <div className="text-white text-right p-20">
+            <h1 className="text-6xl mb:text-5xl mb-3">Headquarters</h1>
             <h2 className="text-5xl mb:text-4xl">Address</h2>
             <h6 className="text-2xl mb:text-xl mb-5">
               The Baby Soi 7
@@ -26,4 +27,4 @@ const Location: FC = () => {
   );
 };
 
-export default Location;
+export default HeadQr;
