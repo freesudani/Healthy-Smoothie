@@ -6,12 +6,17 @@ import { data } from "../data/Navbar";
 import { NavbarProps } from "../models/types.types";
 import Sidebar from "./Sidebar";
 import { useCycle } from "framer-motion";
+import { ContactUsProps } from "../models/types.types";
 
-const Navbar: FC = () => {
+const Navbar: FC<ContactUsProps> = (props) => {
   const navigate = useNavigate();
   const [open, cycleOpen] = useCycle(false, true);
 
   const sidebarHandler = () => cycleOpen();
+
+  const showContactus = () => {
+    props.onShow(true);
+  };
 
   return (
     <nav className="static w-screen h-48 mb:h-40 m-0 px-8 bg-white text-black flex justify-between items-center">
@@ -40,7 +45,10 @@ const Navbar: FC = () => {
         ))}
       </ul>
       <div className="sm:hidden">
-        <button className="lgbt md:mdbt primarybt uppercase mb:smbt">
+        <button
+          className="lgbt md:mdbt primarybt uppercase mb:smbt"
+          onClick={showContactus}
+        >
           Contact Us
         </button>
       </div>

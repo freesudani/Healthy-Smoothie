@@ -60,6 +60,11 @@ export interface OnJobProps {
   OnJobs: React.Dispatch<React.SetStateAction<JobsProps[]>>;
 }
 
+export interface ContactUsProps {
+  show: boolean;
+  onShow: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 export interface JobVacancyProps {
   jobs: JobsProps[];
 }

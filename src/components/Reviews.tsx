@@ -34,14 +34,15 @@ const Reviews: FC = () => {
   return (
     <div className="w-screen h-[31rem] px-10 py-20  bg-white flex flex-col justify-center items-center ">
       <div className="h-full grid grid-rows-2 w-2/4">
-        <AnimatePresence>
-          {index && (
+        <AnimatePresence exitBeforeEnter>
+          {index ? (
             <>
               <motion.div
                 variants={reviewVariants}
+                key={data[index].id}
                 initial="hidden"
                 animate="visible"
-                exit="hidden"
+                exit="exit"
                 className="flex items-start"
               >
                 <img
@@ -54,9 +55,10 @@ const Reviews: FC = () => {
               <motion.div
                 className="flex justify-end items-center"
                 variants={reviewVariants}
+                key={data[index].id + 10}
                 initial="hidden"
                 animate="visible"
-                exit="hidden"
+                exit="exit"
               >
                 <img
                   src={data[index].image}
@@ -73,6 +75,17 @@ const Reviews: FC = () => {
                 </div>
               </motion.div>
             </>
+          ) : (
+            <motion.h1
+              variants={reviewVariants}
+              key={data[index].id}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="text-5xl text-center capitalize justify-items-center"
+            >
+              Click Below to see what our customers say about us
+            </motion.h1>
           )}
         </AnimatePresence>
       </div>

@@ -16,6 +16,6 @@ export const reviewVariants = {
   exit: {
     x: "-100vw",
     opacity: 0,
-    transition: { ease: "easeOut" },
+    transition: { ease: "easeOut", duration: 0.5 },
   },
 };
