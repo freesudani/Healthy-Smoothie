@@ -3,9 +3,12 @@ import { data } from "../data/Reviews";
 import { AnimatePresence, motion } from "framer-motion";
 import { reviewVariants } from "../animations/ReviewsAnimations";
 import OpenQtImage from "../images/open-quotations.png";
+import { useAppSelector, useAppDispatch } from "../App";
+import { reviewActions } from "../store/rev";
 
 const Reviews: FC = () => {
-  const [index, setIndex] = useState<number>(0);
+  const index = useAppSelector((state) => state.review.index);
+  const dispatch = useAppDispatch();
 
   const checkNumber = (number: number) => {
     if (number > data.length - 1) {
@@ -18,17 +21,11 @@ const Reviews: FC = () => {
   };
 
   const nextPerson = () => {
-    setIndex((index) => {
-      let newIndex = index + 1;
-      return checkNumber(newIndex);
-    });
+    dispatch(reviewActions.nextPerson());
   };
 
   const prevPerson = () => {
-    setIndex((index) => {
-      let newIndex = index - 1;
-      return checkNumber(newIndex);
-    });
+    dispatch(reviewActions.prevPerson());
   };
 
   return (

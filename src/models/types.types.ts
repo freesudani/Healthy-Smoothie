@@ -68,3 +68,7 @@ export interface ContactUsProps {
 export interface JobVacancyProps {
   jobs: JobsProps[];
 }
+
+export interface ReviewStateProps {
+  index: number;
+}
