@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import StoreImage from "../images/shop.png";
 import UnderCImage from "../images/underconstructionsign.png";
 import GlobeImage from "../images/Globe-Continent-2015101219.png";

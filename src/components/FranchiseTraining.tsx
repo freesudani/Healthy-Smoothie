@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { data } from "../data/FranchiseTraining";
 import { TrainingProps } from "../models/types.types";
 

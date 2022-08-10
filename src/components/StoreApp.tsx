@@ -1,18 +1,9 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import ThirstyImage from "../images/sad-3672388_1920.png";
 import GooglePlay from "../images/256x256.png";
 import AppStore from "../images/256x256A.png";
 import { motion } from "framer-motion";
-
-const buttonVariants = {
-  hover: {
-    scale: 1.05,
-    transition: {
-      duration: 0.3,
-      yoyo: Infinity,
-    },
-  },
-};
+import { buttonVariants } from "../animations/ButtonAnimation";
 
 const StoreApp: FC = () => {
   return (

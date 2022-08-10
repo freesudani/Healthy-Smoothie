@@ -61,8 +61,7 @@ export interface OnJobProps {
 }
 
 export interface ContactUsProps {
-  show: boolean;
-  onShow: React.Dispatch<React.SetStateAction<boolean>>;
+  onShow: boolean;
 }
 
 export interface JobVacancyProps {
@@ -71,4 +70,20 @@ export interface JobVacancyProps {
 
 export interface ReviewStateProps {
   index: number;
+}
+
+export interface DandFStateProps {
+  itemId: number | undefined;
+}
+
+export interface HeroStateProps {
+  showSlide: boolean;
+}
+
+export interface SetItemProps {
+  state: DandFStateProps;
+  n: {
+    payload: any;
+    type: number;
+  };
 }

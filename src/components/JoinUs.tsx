@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { motion } from "framer-motion";
 import EmployeesImage from "../images/avatar-2191932_1920_prev_ui.png";
 import { joinusVariants } from "../animations/CareersAnimation";

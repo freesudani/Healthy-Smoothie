@@ -1,23 +1,14 @@
-import React, { FC, useState } from "react";
+import { FC } from "react";
 import DrinksImages from "../images/drinks-1430739.png";
 import LemonandeImage from "../images/juice-35236_1280.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { childVariants } from "../animations/HeroAnimation";
+import { useAppSelector, useAppDispatch } from "../App";
+import { heroActions } from "../store/hero";
 
 const Hero: FC = () => {
-  const [showSlide, setShowSlide] = useState(false);
-
-  const showSlideone = () => {
-    setTimeout(() => {
-      setShowSlide(false);
-    }, 500);
-  };
-
-  const showSlidetwo = () => {
-    setTimeout(() => {
-      setShowSlide(true);
-    }, 500);
-  };
+  const showSlide = useAppSelector((state) => state.hero.showSlide);
+  const dispatch = useAppDispatch();
 
   return (
     <div className="w-screen h-[51rem] relative bg-hero-bg bg-no-repeat bg-center bg-cover flex justify-center items-center">
@@ -73,7 +64,7 @@ const Hero: FC = () => {
       <div className="flex absolute left-20 bottom-5">
         <div className="flex items-center mr-4">
           <input
-            onClick={showSlidetwo}
+            onClick={() => dispatch(heroActions.showSlidetwo())}
             id="inline-2-radio"
             type="radio"
             value=""
@@ -83,7 +74,7 @@ const Hero: FC = () => {
         </div>
         <div className="flex items-center mr-4">
           <input
-            onClick={showSlideone}
+            onClick={() => dispatch(heroActions.showSlideone())}
             id="inline-checked-radio"
             type="radio"
             value=""

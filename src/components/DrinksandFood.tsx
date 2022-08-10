@@ -1,10 +1,13 @@
-import React, { FC, useState } from "react";
+import { FC } from "react";
 import { data } from "../data/MenuList";
 import { MenuProps } from "../models/types.types";
 import DrinkandFooditems from "./DrinkandFooditems";
+import { useAppSelector, useAppDispatch } from "../App";
+import { drinkandFoodActions } from "../store/dnf";
 
 const DrinksandFood: FC = () => {
-  const [itemId, setItemId] = useState<number | undefined>();
+  const itemId = useAppSelector((state) => state.drinkfood.itemId);
+  const dispatch = useAppDispatch();
 
   return (
     <div className="w-screen h-screen sm:h-min sm:py-10 ph:my-10 bg-white flex justify-center items-center ">
@@ -14,7 +17,7 @@ const DrinksandFood: FC = () => {
             return (
               <div
                 key={index}
-                onClick={() => setItemId(item.id)}
+                onClick={() => dispatch(drinkandFoodActions.setItemId(item.id))}
                 className={` ${
                   item.id === itemId
                     ? "border-b-4 border-primary-200 mb-2 transition-all duration-200 ease-in"

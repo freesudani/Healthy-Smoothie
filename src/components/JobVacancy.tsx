@@ -1,10 +1,12 @@
-import React, { FC } from "react";
-import { JobVacancyProps, JobsProps } from "../models/types.types";
+import { FC } from "react";
+import { useAppSelector } from "../App";
+import { JobsProps } from "../models/types.types";
 
-const JobVacancy: FC<JobVacancyProps> = (props) => {
+const JobVacancy: FC = () => {
+  const jobs = useAppSelector((state) => state.jobs.jobs);
   return (
     <div>
-      {props.jobs.map((job: JobsProps) => {
+      {jobs.map((job: JobsProps) => {
         const deadlineDate = job.deadline.toLocaleDateString();
         return (
           <div className="w-4/5  md:w-full h-[10rem] px-5 py-5  my-10 first:mt-0 sm:first:mt-5 z-10 grid grid-cols-[3fr_1fr] grid-rows-2  justify-items-center items-center shadow-lg shadow-neutral-900  bg-primary-100 ">

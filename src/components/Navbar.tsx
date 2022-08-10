@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router";
 import IconImage from "../images/e153069c5bc343f08a9b8398de94b63c.png";
@@ -6,16 +6,16 @@ import { data } from "../data/Navbar";
 import { NavbarProps } from "../models/types.types";
 import Sidebar from "./Sidebar";
 import { useCycle } from "framer-motion";
-import { ContactUsProps } from "../models/types.types";
+import { useAppDispatch } from "../App";
+import { contactActions } from "../store/cntus";
 
-const Navbar: FC<ContactUsProps> = (props) => {
+const Navbar: FC = () => {
   const navigate = useNavigate();
   const [open, cycleOpen] = useCycle(false, true);
-
+  const dispatch = useAppDispatch();
   const sidebarHandler = () => cycleOpen();
-
   const showContactus = () => {
-    props.onShow(true);
+    dispatch(contactActions.showContactus());
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
 import { data } from "../data/Navbar";
 import { NavbarProps } from "../models/types.types";

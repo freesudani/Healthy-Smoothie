@@ -12,9 +12,11 @@ const reviewSlice = createSlice({
       let newIndex = state.index + 1;
       if (newIndex > data.length - 1) {
         state.index = 0;
+        return state;
       }
       if (newIndex < 0) {
         state.index = data.length - 1;
+        return state;
       }
       return state;
     },
@@ -22,9 +24,11 @@ const reviewSlice = createSlice({
       let newIndex = state.index - 1;
       if (newIndex > data.length - 1) {
         state.index = 0;
+        return state;
       }
       if (newIndex < 0) {
         state.index = data.length - 1;
+        return state;
       }
       return state;
     },

@@ -1,22 +1,9 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { data } from "../data/MenuList";
-import { SubMenuProps, itemProps } from "../models/types.types";
+import { SubMenuProps } from "../models/types.types";
 import { motion } from "framer-motion";
-
-const menuVariants = {
-  hidden: {
-    opacity: 0,
-    x: "10vw",
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeIn",
-    },
-  },
-};
+import { itemProps } from "../models/types.types";
+import { menuVariants } from "../animations/DrinkandFoodItemAnimation";
 
 const DrinkandFooditems: FC<itemProps> = ({ itemId }) => {
   return (

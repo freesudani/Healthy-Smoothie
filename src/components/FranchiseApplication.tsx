@@ -1,9 +1,30 @@
-import React, { FC } from "react";
+import { FC, useRef } from "react";
 import OrangeJuiceImage from "../images/tangerine-newt-hINQgaTqg7Q-unsplash (1)_prev_ui.png";
 
 const FranchiseApplication: FC = () => {
+  const firstnameInputRef = useRef<HTMLInputElement>(null);
+  const lastnameInputRef = useRef<HTMLInputElement>(null);
+  const cityInputRef = useRef<HTMLInputElement>(null);
+  const stateInputRef = useRef<HTMLSelectElement>(null);
+  const zipInputRef = useRef<HTMLInputElement>(null);
+  const networthInputRef = useRef<HTMLSelectElement>(null);
+  const liqcapInputRef = useRef<HTMLSelectElement>(null);
+  const hearaboutusInputRef = useRef<HTMLSelectElement>(null);
+  const tellaboutusInputRef = useRef<HTMLInputElement>(null);
+  const cancontactInputRef = useRef<HTMLInputElement>(null);
+
   const FranchiseHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const enteredFirstName = firstnameInputRef.current?.value;
+    const enteredLastName = lastnameInputRef.current?.value;
+    const enteredCity = cityInputRef.current?.value;
+    const enteredState = stateInputRef.current?.value;
+    const enteredZip = zipInputRef.current?.value;
+    const enteredNetworth = networthInputRef.current?.value;
+    const enteredLiqCap = liqcapInputRef.current?.value;
+    const enteredHearAbout = hearaboutusInputRef.current?.value;
+    const enteredTellAbout = tellaboutusInputRef.current?.value;
+    const eneterdCanContact = cancontactInputRef.current?.value;
   };
 
   return (
@@ -41,6 +62,7 @@ const FranchiseApplication: FC = () => {
                 id="grid-first-name"
                 type="text"
                 placeholder="Jane"
+                ref={firstnameInputRef}
               />
             </div>
             <div className="w-1/2 px-3">
@@ -55,6 +77,7 @@ const FranchiseApplication: FC = () => {
                 id="grid-last-name"
                 type="text"
                 placeholder="Doe"
+                ref={lastnameInputRef}
               />
             </div>
           </div>
@@ -72,6 +95,7 @@ const FranchiseApplication: FC = () => {
                 id="grid-city"
                 type="text"
                 placeholder="Albuquerque"
+                ref={cityInputRef}
               />
             </div>
             <div className="w-1/3 px-3">
@@ -85,10 +109,11 @@ const FranchiseApplication: FC = () => {
                 <select
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-state"
+                  ref={stateInputRef}
                 >
-                  <option>New Mexico</option>
-                  <option>Missouri</option>
-                  <option>Texas</option>
+                  <option value="new-mexico">New Mexico</option>
+                  <option value="missouri">Missouri</option>
+                  <option value="texas">Texas</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                   <svg
@@ -113,6 +138,7 @@ const FranchiseApplication: FC = () => {
                 id="grid-zip"
                 type="text"
                 placeholder="90210"
+                ref={zipInputRef}
               />
             </div>
           </div>
@@ -135,10 +161,11 @@ const FranchiseApplication: FC = () => {
                 <select
                   className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-state"
+                  ref={networthInputRef}
                 >
-                  <option>Less Than $350,000</option>
-                  <option>$350,000 to $1,000,000</option>
-                  <option>over $1,000,000</option>
+                  <option value="1">Less Than $350,000</option>
+                  <option value="2">$350,000 to $1,000,000</option>
+                  <option value="3">over $1,000,000</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                   <svg
@@ -162,10 +189,11 @@ const FranchiseApplication: FC = () => {
                 <select
                   className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-state"
+                  ref={liqcapInputRef}
                 >
-                  <option>Less Than $150,000</option>
-                  <option>$150,000 to $500,000</option>
-                  <option>over $500,000</option>
+                  <option value="1">Less Than $150,000</option>
+                  <option value="2">$150,000 to $500,000</option>
+                  <option value="3">over $500,000</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                   <svg
@@ -190,11 +218,12 @@ const FranchiseApplication: FC = () => {
               <select
                 className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-source"
+                ref={hearaboutusInputRef}
               >
-                <option>Website</option>
-                <option>Social Media</option>
-                <option>Referral</option>
-                <option>Other</option>
+                <option value="1">Website</option>
+                <option value="2">Social Media</option>
+                <option value="3">Referral</option>
+                <option value="4">Other</option>
               </select>
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                 <svg
@@ -217,6 +246,7 @@ const FranchiseApplication: FC = () => {
             <input
               id="grid-tellus"
               type="text"
+              ref={tellaboutusInputRef}
               className="appearance-none block w-full h-40 bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             />
           </div>
@@ -226,6 +256,7 @@ const FranchiseApplication: FC = () => {
               type="checkbox"
               value=""
               id="flexCheckDefault"
+              ref={cancontactInputRef}
             />
             <label
               className="block uppercase tracking-wide text-gray-700 text-xl mb:text-lg  font-bold my-5"

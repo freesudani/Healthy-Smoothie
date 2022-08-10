@@ -1,7 +1,6 @@
-import React, { FC } from "react";
-import { OnJobProps } from "../models/types.types";
+import { FC } from "react";
 
-const JobSearchForm: FC<OnJobProps> = (props) => {
+const JobSearchForm: FC = () => {
   return (
     <form className="w-4/5 h-min bg-gray-400 rounded-lg p-5 shadow-lg shadow-neutral-900">
       <div className="w-full px-3">

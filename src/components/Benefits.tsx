@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { data } from "../data/Benefits";
 import { BenefitsProps } from "../models/types.types";
 

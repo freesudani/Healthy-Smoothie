@@ -1,14 +1,17 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { motion } from "framer-motion";
 import {
   contactusVariants,
   blackdropVariant,
 } from "../animations/ContactusAnimation";
-import { ContactUsProps } from "../models/types.types";
+import { useAppDispatch } from "../App";
+import { contactActions } from "../store/cntus";
 
-const ContactUs: FC<ContactUsProps> = (props) => {
+const ContactUs: FC = () => {
+  const dispatch = useAppDispatch();
+
   const hideContactus = () => {
-    props.onShow(false);
+    dispatch(contactActions.hideContactus());
   };
 
   return (

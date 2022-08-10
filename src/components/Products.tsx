@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import SmoothieImage from "../images/smoothie-1703657_prev_ui.png";
 import TomatoImage from "../images/tomato-316308_prev_ui.png";
 import CoffeeImage from "../images/cappuccino-756490_prev_ui.png";

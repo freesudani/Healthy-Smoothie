@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
@@ -14,15 +14,11 @@ import type { TypedUseSelectorHook } from "react-redux";
 import type { RootState, AppDispatch } from "./store/index";
 
 const App: FC = () => {
-  const [showContact, setShowContact] = useState<boolean>(false);
+  const show = useAppSelector((state) => state.cntus.onShow);
   return (
     <div className="flex flex-col justify-center items-center">
-      <Navbar onShow={setShowContact} show={showContact} />
-      <AnimatePresence>
-        {showContact && (
-          <ContactUs onShow={setShowContact} show={showContact} />
-        )}
-      </AnimatePresence>
+      <Navbar />
+      <AnimatePresence>{show && <ContactUs />}</AnimatePresence>
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
